@@ -45,7 +45,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         httpSession.removeAttribute("user");
 
-        getRedirectStrategy().sendRedirect(request, response, createRedirectUrl(clientUrl));
+        getRedirectStrategy().sendRedirect(request, response, createRedirectUrl(clientUrl + "/main"));
     }
 
     public String createRedirectUrl(String url) {
